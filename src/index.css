@@ -1,0 +1,642 @@
+/* header-flex düzeni */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.header-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.header-home-link {
+  font-size: 1rem;
+  color: #222;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 28px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f3f6f8;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.header-home-link:hover {
+  background: #f8fafc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* index.css - temel stiller */
+/* Genel düzen */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.app-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --muted: #f3f6f8;
+  --card: #ffffff;
+  --accent: #ffb74d;
+  --green: #10b981;
+  --muted-text: #6b7280;
+  --border: #e6e9ee;
+  --shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+body {
+  font-family: Inter, "Segoe UI", Roboto, sans-serif;
+  background: var(--muted);
+  margin: 0;
+  color: #111827;
+}
+
+/* Header */
+.app-header {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+}
+
+/* controls */
+.controls-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* filters */
+.filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filters select {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  background: #fff;
+  cursor: pointer;
+  min-width: 140px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 1em;
+  padding-right: 32px;
+  transition: all 0.2s ease;
+}
+
+.filters select:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: #94a3b8;
+  box-shadow: 0 0 0 1px #94a3b8;
+}
+
+.searchbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex: 1;
+}
+
+.search-input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 420px;
+  background: #fff;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: var(--card);
+  box-shadow: none;
+  border: 1px solid var(--border);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px dashed var(--border);
+}
+
+.btn-sm {
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+/* Main layout */
+.main-content {
+  display: flex;
+  gap: 20px;
+  padding: 20px 30px;
+}
+
+.list-panel {
+  flex: 1;
+}
+
+.right-panel {
+  width: 320px;
+}
+
+/* TV list */
+.tvlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+/* card */
+.tvcard {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  align-items: flex-start;
+  min-height: 200px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.tvcard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow), 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.poster img {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.poster {
+  min-width: 140px;
+  max-width: 140px;
+  height: 200px;
+}
+
+.placeholder {
+  width: 160px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #e6eef7, #f0f9ff);
+  border-radius: 8px;
+  color: #7c9bb5;
+  font-size: 13px;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--muted-text);
+  white-space: nowrap;
+}
+
+.rating {
+  background: linear-gradient(90deg, #fff7ed, #fff1d6);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #b45309;
+}
+
+.summary {
+  color: var(--muted-text);
+  font-size: 14px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.card-actions .btn {
+  font-size: 13px;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-actions .btn:hover {
+  background: #f59e0b;
+}
+
+/* watchlist panel */
+.watchlist-panel {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.watchlist-items {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.watch-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wl-left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.wl-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.wl-title {
+  font-weight: 600;
+}
+
+.wl-meta {
+  font-size: 12px;
+  color: var(--muted-text);
+}
+
+/* pagination */
+.pagination {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* modal / detail */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  overflow: hidden;
+}
+
+
+/* ShowDetail kutusu ve içerik */
+.showdetail-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: 32px 36px 28px 36px;
+  max-width: 1200px;
+  max-height: 90vh;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.showdetail-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.showdetail-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.showdetail-box::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.showdetail-nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.showdetail-nav-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.showdetail-nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.showdetail-nav-right {
+  flex: 1;
+}
+
+.showdetail-nav-link {
+  color: #222;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-decoration: none;
+  background: #f7f8fa;
+  border-radius: 8px;
+  padding: 8px 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  transition: background 0.2s;
+}
+
+.showdetail-nav-link:hover {
+  background: #ffe9b3;
+}
+
+.showdetail-back {
+  background: #f7f8fa;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1.05rem;
+  color: #222;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  transition: background 0.2s;
+}
+
+.showdetail-back:hover {
+  background: #ffe9b3;
+}
+
+.showdetail-main {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.showdetail-poster img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.showdetail-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.showdetail-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.showdetail-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.showdetail-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #444;
+  font-weight: 500;
+  background: #f7f6e7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.showdetail-summary {
+  font-size: 1.08rem;
+  color: #222;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* Bölümler kutusu */
+.showdetail-episodes {
+  margin-top: 18px;
+}
+
+.showdetail-episodes h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.showdetail-episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px;
+}
+
+.showdetail-episode-item {
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  transition: background-color 0.2s;
+}
+
+.showdetail-episode-item:hover {
+  background: #f8f9fa;
+}
+
+.episode-main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.episode-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.episode-season {
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.episode-name {
+  font-size: 1rem;
+  color: #222;
+}
+
+.episode-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.episode-number {
+  color: #888;
+}
+
+.episode-date {
+  color: #666;
+}
+
+.episode-duration {
+  color: #666;
+}
+
+.episode-source {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.episode-source:hover {
+  color: #f57c00;
+  text-decoration: underline;
+}
+
+.episode-summary {
+  margin-top: 12px;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding-left: 76px;
+}
+
+/* small utils */
+.spinner {
+  padding: 20px;
+  font-weight: 600;
+  color: var(--muted-text);
+}
+
+.error {
+  padding: 12px;
+  background: #fff1f2;
+  border-radius: 8px;
+  color: #7f1d1d;
+}
+
+/* footer */
+.footer {
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted-text);
+  border-top: 1px solid var(--border);
+  background: transparent;
+}
