@@ -4,7 +4,7 @@ Bu proje, film ve dizi severler için geliştirilmiş bir web uygulamasıdır. K
 
 ## Canlı Demo
 
-Projenin canlı versiyonunu görmek için: [Kampüs Film Kulübü](https://kitaplik-odev-womr.vercel.app/)
+Projenin canlı versiyonunu görmek için: [Kampüs Film Kulübü (https://kitaplik-odev-womr.vercel.app/)](https://kitaplik-odev-womr.vercel.app/)
 
 ## Özellikler
 
