@@ -1,16 +1,74 @@
-# React + Vite
+# Kampüs Film Kulübü
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, film ve dizi severler için geliştirilmiş bir web uygulamasıdır. Kullanıcılar, çeşitli TV şovlarını arayabilir, filtreleyebilir ve izleme listelerine ekleyebilirler.
 
-Currently, two official plugins are available:
+## Canlı Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Projenin canlı versiyonunu görmek için: [Kampüs Film Kulübü](https://kitaplik-odev-womr.vercel.app/)
 
-## React Compiler
+## Özellikler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- TV şovları arama
+- Filtreleme seçenekleri
+- İzleme listesi oluşturma
+- Detaylı TV şovu bilgileri
+- Duyarlı tasarım (Responsive Design)
+- Sayfalama sistemi
 
-## Expanding the ESLint configuration
+## Teknolojiler
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript/JSX
+- CSS
+- API entegrasyonu
+
+## Kurulum
+
+Projeyi yerel ortamınızda çalıştırmak için:
+
+1. Repoyu klonlayın:
+```bash
+git clone [repo-url]
+```
+
+2. Proje dizinine gidin:
+```bash
+cd kampus_film_kulubu
+```
+
+3. Gerekli paketleri yükleyin:
+```bash
+npm install
+```
+
+4. Geliştirme sunucusunu başlatın:
+```bash
+npm run dev
+```
+
+## Geliştirme
+
+Projeyi geliştirme modunda çalıştırmak için:
+
+```bash
+npm run dev
+```
+
+Projeyi derlemek için:
+
+```bash
+npm run build
+```
+
+## Katkıda Bulunma
+
+1. Bu projeyi fork edin
+2. Yeni bir branch oluşturun (`git checkout -b feature/yeniOzellik`)
+3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik eklendi'`)
+4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
+5. Pull Request oluşturun
+
+## Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır.
